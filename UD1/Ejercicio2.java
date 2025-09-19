@@ -20,12 +20,14 @@ public class Ejercicio2 extends Thread {
         }
 
         for (int i = 0; i < NUM_HILOS; i++) {
+
             try {
-                hilos[i].sleep(1000);
+                hilos[i].join();
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+
         }
 
         System.out.println("\n\nValor final del contador: " + contador);
